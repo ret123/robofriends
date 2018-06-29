@@ -27,7 +27,7 @@ export const requestRobots = (state=initialRobotState,action={}) => {
       case REQUEST_ROBOTS_SUCCESS:
         return { ...state, robots: action.robots,isPending:false}; 
       case REQUEST_ROBOTS_FAILED:
-        return {...state, robots: action.errors,isPending: false};
+        return {...state, error: action.errors,isPending: true};
     
       default: 
       return state;  
